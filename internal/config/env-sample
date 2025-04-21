@@ -1,0 +1,6 @@
+export INGESTER_DATABASE_DSN="your_db_connection_string"
+export INGESTER_MQ_URL="your_mq_connection_url"
+# Optional: Override defaults
+export INGESTER_LOG_LEVEL="debug"
+export INGESTER_SCHEDULER_DEFAULT_INTERVAL="30m"
+export INGESTER_SCHEDULER_MAX_CONCURRENT_FETCHES="20"
