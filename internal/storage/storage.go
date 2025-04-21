@@ -11,7 +11,7 @@ import (
 	"time"
 
 	// Import your internal parsing package to use its types
-	"github.com/appthere/social-ingest-rssatom/internal/parsing"
+	"github.com/appthere/rssatom/internal/parsing"
 	// Import your chosen SQL driver (e.g., postgres) in main.go or here if only used here
 	// _ "github.com/lib/pq"
 )

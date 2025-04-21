@@ -11,11 +11,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/appthere/social-ingest-rssatom/internal/config"
-	"github.com/appthere/social-ingest-rssatom/internal/fetching"
-	"github.com/appthere/social-ingest-rssatom/internal/parsing"
-	"github.com/appthere/social-ingest-rssatom/internal/storage"
-	"github.com/appthere/social-ingest-rssatom/internal/translation" // Import the translation package
+	"github.com/appthere/rssatom/internal/config"
+	"github.com/appthere/rssatom/internal/fetching"
+	"github.com/appthere/rssatom/internal/parsing"
+	"github.com/appthere/rssatom/internal/storage"
+	"github.com/appthere/rssatom/internal/translation" // Import the translation package
 )
 
 const (

@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/appthere/social-ingest-rssatom/internal/config"    // To use TranslationConfig
-	"github.com/appthere/social-ingest-rssatom/internal/messaging" // To use the MQ client interface/type
-	"github.com/appthere/social-ingest-rssatom/internal/parsing"
+	"github.com/appthere/rssatom/internal/config"    // To use TranslationConfig
+	"github.com/appthere/rssatom/internal/messaging" // To use the MQ client interface/type
+	"github.com/appthere/rssatom/internal/parsing"
 )
 
 // Notifier defines the interface for sending notifications about new items.

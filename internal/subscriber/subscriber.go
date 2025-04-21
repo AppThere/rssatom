@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/appthere/social-ingest-rssatom/internal/messaging"
-	"github.com/appthere/social-ingest-rssatom/internal/subscription" // Corrected import path
+	"github.com/appthere/rssatom/internal/messaging"
+	"github.com/appthere/rssatom/internal/subscription" // Corrected import path
 )
 
 // subscriptionRequest defines the expected structure of a message requesting a new subscription.

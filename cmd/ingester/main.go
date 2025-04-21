@@ -13,15 +13,15 @@ import (
 
 	// --- Internal Dependencies ---
 	// Ensure these paths match your actual go module structure
-	"github.com/appthere/social-ingest-rssatom/internal/config"
-	"github.com/appthere/social-ingest-rssatom/internal/fetching"
-	"github.com/appthere/social-ingest-rssatom/internal/messaging" // Using this for MQ client
-	"github.com/appthere/social-ingest-rssatom/internal/parsing"
-	"github.com/appthere/social-ingest-rssatom/internal/scheduler" // Using this
-	"github.com/appthere/social-ingest-rssatom/internal/storage"
-	"github.com/appthere/social-ingest-rssatom/internal/subscriber"   // Using this
-	"github.com/appthere/social-ingest-rssatom/internal/subscription" // Using this (package name is subscription)
-	"github.com/appthere/social-ingest-rssatom/internal/translation"  // Added translation notifier
+	"github.com/appthere/rssatom/internal/config"
+	"github.com/appthere/rssatom/internal/fetching"
+	"github.com/appthere/rssatom/internal/messaging" // Using this for MQ client
+	"github.com/appthere/rssatom/internal/parsing"
+	"github.com/appthere/rssatom/internal/scheduler" // Using this
+	"github.com/appthere/rssatom/internal/storage"
+	"github.com/appthere/rssatom/internal/subscriber"   // Using this
+	"github.com/appthere/rssatom/internal/subscription" // Using this (package name is subscription)
+	"github.com/appthere/rssatom/internal/translation"  // Added translation notifier
 
 	// --- External Dependencies ---
 	// _ "github.com/joho/godotenv/autoload" // Example: For .env files

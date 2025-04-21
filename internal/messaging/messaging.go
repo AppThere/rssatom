@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/appthere/social-ingest-rssatom/internal/config" // To use config types
+	"github.com/appthere/rssatom/internal/config" // To use config types
 
 	amqp "github.com/rabbitmq/amqp091-go" // RabbitMQ client library
 )

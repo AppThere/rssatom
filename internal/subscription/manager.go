@@ -10,7 +10,7 @@ import (
 	"net/url" // For basic URL validation/normalization
 	"strings"
 
-	"github.com/appthere/social-ingest-rssatom/internal/storage"
+	"github.com/appthere/rssatom/internal/storage"
 )
 
 // Manager handles the business logic for feed subscriptions.
