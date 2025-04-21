@@ -17,8 +17,29 @@ The `rssatom` ingester performs the following core functions:
 
 The service follows a modular design, with components interacting primarily through interfaces and well-defined responsibilities:
 
-+---------------------+ +-----------------+ +-----------------------+ +----------------+ | A: Subscription Req | ---> | Subscriber | ---> | B,C,D,E: Subscription | ---> | F: Feed Meta | | (e.g., MQ Message) | | (internal/ | | Manager | | Storage | +---------------------+ | subscriber) | | (internal/ | | (internal/ | +-----------------+ | subscription) | | storage) | +-----------------------+ +-------+--------+ | | (Feed List) V +-----------------------+ +-----------------+ +-----------------+ +-----------+----+ | K: Notify Protocol | <--- | Notifier | <--- | J: Parser | <--- | H: Fetcher | <--- G: Scheduler | | Translation Service | | (internal/ | | (internal/ | | (internal/ | | (internal/ | | (e.g., MQ Consumer) | | translation) | | parsing) | | fetching) | | scheduler) | +-----------------------+ +-------+---------+ +--------+--------+ +----------------+ +--------------+ | (New Items) | (Feed XML) V V +--------------------------------+ | I: Item Storage (GUIDs, etc.) | | (internal/storage) | +--------------------------------+
-
+```
++---------------------+      +-----------------+      +-----------------------+      +----------------+
+| A: Subscription Req | ---> | Subscriber      | ---> | B,C,D,E: Subscription | ---> | F: Feed Meta   |
+| (e.g., MQ Message)  |      | (internal/      |      | Manager               |      | Storage        |
++---------------------+      | subscriber)     |      | (internal/            |      | (internal/     |
+                             +-----------------+      | subscription)         |      | storage)       |
+                                                      +-----------------------+      +-------+--------+
+                                                                                             |
+                                                                                             |
+                                                                                        (Feed List)
+                                                                                             V
++-----------------------+      +-----------------+      +-----------------+      +-----------+----+      +--------------+
+| K: Notify Protocol    | <--- | Notifier        | <--- | J: Parser       | <--- | H: Fetcher     | <--- | G: Scheduler |
+| Translation Service   |      | (internal/      |      | (internal/      |      | (internal/     |      | (internal/   |
+| (e.g., MQ Consumer)   |      | translation)    |      | parsing)        |      | fetching)      |      | scheduler)   |
++-----------------------+      +-------+---------+      +--------+--------+      +----------------+      +--------------+
+                                       | (New Items)             | (Feed XML)
+                                       V                         V
+                                    +--------------------------------+
+                                    | I: Item Storage (GUIDs, etc.)  |
+                                    | (internal/storage)             |
+                                    +--------------------------------+
+```
 
 **Flow:**
 
